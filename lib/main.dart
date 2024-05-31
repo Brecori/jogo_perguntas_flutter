@@ -197,54 +197,47 @@ class TextoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Texto sobre o O20'),
+        title: const Text('Saiba mais'),
         
       ),
       backgroundColor: const Color(0xFFcbe2f2),
 
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: 
       Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 16), 
               child: Image(
-                image: AssetImage('../assets/Banner.png'),
+                image: AssetImage('assets/Banner.png'),
+                fit: BoxFit.fill,
               )),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
               child: Text(
                 'O O20, que teve seu embrião nos últimos dois ciclos do G20, na Indonésia e na Índia, terá um papel importante em dar voz a sociedade civil, considerando organizações não governamentais, iniciativa privada, povos indígenas, comunidades tradicionais e cientistas. O grupo fortalece e consolida a presença do oceano no G20, ao integrar os países que antecederam e que sucederão o Brasil em sua presidência, e os Grupos de Trabalho das Trilhas de Sherpas e de Finanças.',
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
               child: Text(
                 'A criação do Oceans20 pela Presidência Brasileira no G20 é um marco histórico de reconhecimento do papel central do oceano nas agendas globais de clima, energia e meio ambiente e que, apesar de ser um oceano global e interligado, é plural em suas características.',
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
               child: Text(
                 'A agenda do oceano é um dos quatro pilares do Grupo de Trabalho sobre Sustentabilidade Climática e Ambiental, coordenado pelo Ministério do Meio Ambiente, e permeia outros grupos de trabalho, dada a característica transversal do tema. O Oceans 20 é coordenado pela Cátedra Unesco para a Sustentabilidade do Oceano da Universidade de São Paulo, em colaboração com o Fórum Econômico Mundial, o Pacto Global da ONU – Rede Brasil e Ocean Stewardship Coalition -, o Fundo Brasileiro para a Biodiversidade (FUNBIO) e o Instituto Nacional de Pesquisas Oceânicas (INPO).',
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
               child: Text(
                 'SITE: https://www.oceans20brasil.org/',
               ),
-            ),
-            
-            const SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text('Voltar'),
-            ),
+            )
           ],
         ) 
         ),
