@@ -7,17 +7,7 @@ class Resultado extends StatelessWidget {
   const Resultado(this.pontuacao, this.quandoReiniciarQuestionario,
       {super.key});
 
-  String get fraseResultado {
-    if (pontuacao < 8) {
-      return 'Parabéns';
-    } else if (pontuacao < 12) {
-      return 'Você é bom!';
-    } else if (pontuacao < 16) {
-      return 'Impressionante!';
-    } else {
-      return 'Nível Jedi!';
-    }
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +16,7 @@ class Resultado extends StatelessWidget {
       children: [
         Center(
           child: Text(
-            fraseResultado,
+            'Parabéns! Você acertou $pontuacao questões!',
             style: const TextStyle(
               fontSize: 28,
             ),
@@ -35,7 +25,7 @@ class Resultado extends StatelessWidget {
         TextButton(
           onPressed: quandoReiniciarQuestionario,
           child: const Text(
-            'Reiniciar?',
+            'Realizar teste novamente',
             style: TextStyle(
               fontSize: 18,
             ),
