@@ -9,14 +9,17 @@ class Resposta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue,
-          foregroundColor: Colors.white,
+      width: 600.0,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0), // Define um padding de 8 pixels em todas as direções
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+          ),
+          onPressed: quandoSelecionado,
+          child: Text(texto),
         ),
-        onPressed: quandoSelecionado,
-        child: Text(texto),
       ),
     );
   }
